@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Burmese Transliterator</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <script src="burmese_parser.js"></script>
+    <script src="burmese.js" type="text/javascript"></script>
+
+    <script src="../common.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="../common.css">
+
+  </head>
+  <body>
+   <textarea id="textarea-1" style="width: 70%; height: 30%;"></textarea>
+    <button onclick="convert($('#textarea-1').val())">変換</button>
+
+    <div id="div-result"></div>
+
+    <div id="div-search-box">
+      Search <button class="button-search" onclick="openNew(`https://my.wikipedia.org/wiki/${selection()}`)">wikipedia.my</button><br>
+      Search <button class="button-search" onclick="openNew(`https://www.google.co.jp/search?q=${selection()}`)">google</button><br>
+      Search <button class="button-search" onclick="openNew(`https://en.wiktionary.org/wiki/${selection()}`)">wiktionary.en</button><br>
+      Search <button class="button-search" onclick="openNew(`http://www.sealang.net/burmese/dictionary.htm?${selection()}`)">sealang/burmese</button><br>
+    </div>
+  </body>
+</html>
